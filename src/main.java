@@ -1,7 +1,9 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
+//trừu tượng
 abstract class Person {
+    // đóng gói
     private String name;
     private int age;
     private String address;
@@ -38,6 +40,7 @@ abstract class Person {
         this.address = address;
     }
 
+    // phương thức trừu tượng
     public abstract void displayRole();
 
     public void displayInfo() {
@@ -47,7 +50,9 @@ abstract class Person {
     }
 }
 
+// kế thừa
 class Student extends Person {
+    // đóng gói
     private String studentId;
     private double gpa;
 
@@ -75,11 +80,13 @@ class Student extends Person {
         }
     }
 
+    // đa hình
     @Override
     public void displayRole() {
         System.out.println("Vai trò: Sinh viên");
     }
 
+    // đa hình
     @Override
     public void displayInfo() {
         super.displayInfo();
@@ -89,7 +96,9 @@ class Student extends Person {
     }
 }
 
+// kế thừa
 class Teacher extends Person {
+    // đóng gói
     private String teacherId;
     private double salary;
 
@@ -117,11 +126,13 @@ class Teacher extends Person {
         }
     }
 
+    // đa hình
     @Override
     public void displayRole() {
         System.out.println("Vai trò: Giảng viên");
     }
 
+    // đa hình
     @Override
     public void displayInfo() {
         super.displayInfo();
